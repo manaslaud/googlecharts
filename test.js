@@ -1,4 +1,4 @@
-// read local JSON file in javascript
+// read local JSON file in javascript took it from kagggle
 function sort_datearr(datearr){
   return datearr.sort((a,b)=>new Date(a).getTime()-new Date(b).getTime());
 }
@@ -11,10 +11,10 @@ fetch("data1.json")
     // Load the Visualization API and the corechart package
     google.charts.load('current', {'packages':['corechart']});
 
-    // Set a callback to run when the Google Visualization API is loaded
+    
     google.charts.setOnLoadCallback(drawChart);
 
-    // Define the function to draw the chart
+    // Defined the function to draw the chart
     function drawChart() {
       let date_array=[];
       // Create a new DataTable
@@ -50,7 +50,7 @@ fetch("data1.json")
         }
       };
 
-      // Instantiate and draw the chart, passing in the options and the data
+      
       var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
